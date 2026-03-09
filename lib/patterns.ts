@@ -11,6 +11,18 @@ import { variants as aboutVariants } from "@/components/patterns/about";
 import { variants as globalReachVariants } from "@/components/patterns/global-reach";
 import { variants as interactiveDemoVariants } from "@/components/patterns/interactive-demo";
 import { variants as footerVariants } from "@/components/patterns/footer";
+import { variants as faqVariants } from "@/components/patterns/faq";
+import { variants as logoBarVariants } from "@/components/patterns/logo-bar";
+import { variants as howItWorksVariants } from "@/components/patterns/how-it-works";
+import { variants as statsCounterVariants } from "@/components/patterns/stats-counter";
+import { variants as integrationsVariants } from "@/components/patterns/integrations";
+import { variants as codeSnippetVariants } from "@/components/patterns/code-snippet";
+import { variants as announcementBarVariants } from "@/components/patterns/announcement-bar";
+import { variants as caseStudiesVariants } from "@/components/patterns/case-studies";
+import { variants as comparisonTableVariants } from "@/components/patterns/comparison-table";
+import { variants as trustBadgesVariants } from "@/components/patterns/trust-badges";
+import { variants as newsletterVariants } from "@/components/patterns/newsletter";
+import { variants as problemSolutionVariants } from "@/components/patterns/problem-solution";
 
 export interface PatternGroup {
   id: string;
@@ -97,6 +109,90 @@ export const patternGroups: PatternGroup[] = [
     description: "Page footers with social links.",
     variants: footerVariants,
     defaultVariant: "footer-beams",
+  },
+  {
+    id: "faq",
+    name: "FAQ",
+    description: "Frequently asked questions sections.",
+    variants: faqVariants,
+    defaultVariant: "faq-accordion",
+  },
+  {
+    id: "logo-bar",
+    name: "Logo Bar",
+    description: "Trusted-by logo showcases and social proof bars.",
+    variants: logoBarVariants,
+    defaultVariant: "logo-bar-marquee",
+  },
+  {
+    id: "how-it-works",
+    name: "How It Works",
+    description: "Step-by-step workflow explanations.",
+    variants: howItWorksVariants,
+    defaultVariant: "how-it-works-timeline",
+  },
+  {
+    id: "stats-counter",
+    name: "Stats Counter",
+    description: "Animated statistics and metrics displays.",
+    variants: statsCounterVariants,
+    defaultVariant: "stats-counter-bar",
+  },
+  {
+    id: "integrations",
+    name: "Integrations",
+    description: "Integration showcases and partner ecosystems.",
+    variants: integrationsVariants,
+    defaultVariant: "integrations-bento",
+  },
+  {
+    id: "code-snippet",
+    name: "Code Snippet",
+    description: "Developer-focused code examples and API showcases.",
+    variants: codeSnippetVariants,
+    defaultVariant: "code-snippet-tabs",
+  },
+  {
+    id: "announcement-bar",
+    name: "Announcement Bar",
+    description: "Top-of-page announcements and promotional banners.",
+    variants: announcementBarVariants,
+    defaultVariant: "announcement-bar-gradient",
+  },
+  {
+    id: "case-studies",
+    name: "Case Studies",
+    description: "Customer success stories and results.",
+    variants: caseStudiesVariants,
+    defaultVariant: "case-studies-sticky",
+  },
+  {
+    id: "comparison-table",
+    name: "Comparison Table",
+    description: "Feature comparisons and competitive differentiators.",
+    variants: comparisonTableVariants,
+    defaultVariant: "comparison-table-grid",
+  },
+  {
+    id: "trust-badges",
+    name: "Trust Badges",
+    description: "Security certifications and compliance badges.",
+    variants: trustBadgesVariants,
+    defaultVariant: "trust-badges-bar",
+  },
+  {
+    id: "newsletter",
+    name: "Newsletter",
+    description: "Email subscription and newsletter signup forms.",
+    variants: newsletterVariants,
+    defaultVariant: "newsletter-beams",
+  },
+  {
+    id: "problem-solution",
+    name: "Problem & Solution",
+    description: "Before/after comparisons highlighting platform value.",
+    variants: problemSolutionVariants,
+    defaultVariant: "problem-solution-cards",
   },
 ];
 

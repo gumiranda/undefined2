@@ -48,6 +48,52 @@ const componentMap: Record<string, React.ComponentType<{ id?: string }>> = {
   // Footer
   "footer-beams": dynamic(() => import("@/components/patterns/footer/footer-beams")),
   "footer-mask": dynamic(() => import("@/components/patterns/footer/footer-mask")),
+  // FAQ
+  "faq-accordion": dynamic(() => import("@/components/patterns/faq/faq-accordion")),
+  "faq-spotlight": dynamic(() => import("@/components/patterns/faq/faq-spotlight")),
+  "faq-tracing": dynamic(() => import("@/components/patterns/faq/faq-tracing")),
+  // Logo Bar
+  "logo-bar-marquee": dynamic(() => import("@/components/patterns/logo-bar/logo-bar-marquee")),
+  "logo-bar-grid": dynamic(() => import("@/components/patterns/logo-bar/logo-bar-grid")),
+  "logo-bar-ticker": dynamic(() => import("@/components/patterns/logo-bar/logo-bar-ticker")),
+  // How It Works
+  "how-it-works-timeline": dynamic(() => import("@/components/patterns/how-it-works/how-it-works-timeline")),
+  "how-it-works-sticky": dynamic(() => import("@/components/patterns/how-it-works/how-it-works-sticky")),
+  "how-it-works-cards": dynamic(() => import("@/components/patterns/how-it-works/how-it-works-cards")),
+  // Stats Counter
+  "stats-counter-bar": dynamic(() => import("@/components/patterns/stats-counter/stats-counter-bar")),
+  "stats-counter-cards": dynamic(() => import("@/components/patterns/stats-counter/stats-counter-cards")),
+  "stats-counter-spotlight": dynamic(() => import("@/components/patterns/stats-counter/stats-counter-spotlight")),
+  // Integrations
+  "integrations-bento": dynamic(() => import("@/components/patterns/integrations/integrations-bento")),
+  "integrations-hover": dynamic(() => import("@/components/patterns/integrations/integrations-hover")),
+  "integrations-marquee": dynamic(() => import("@/components/patterns/integrations/integrations-marquee")),
+  // Code Snippet
+  "code-snippet-tabs": dynamic(() => import("@/components/patterns/code-snippet/code-snippet-tabs")),
+  "code-snippet-reveal": dynamic(() => import("@/components/patterns/code-snippet/code-snippet-reveal")),
+  "code-snippet-typewriter": dynamic(() => import("@/components/patterns/code-snippet/code-snippet-typewriter")),
+  // Announcement Bar
+  "announcement-bar-gradient": dynamic(() => import("@/components/patterns/announcement-bar/announcement-bar-gradient")),
+  "announcement-bar-sparkles": dynamic(() => import("@/components/patterns/announcement-bar/announcement-bar-sparkles")),
+  // Case Studies
+  "case-studies-cards": dynamic(() => import("@/components/patterns/case-studies/case-studies-cards")),
+  "case-studies-sticky": dynamic(() => import("@/components/patterns/case-studies/case-studies-sticky")),
+  "case-studies-carousel": dynamic(() => import("@/components/patterns/case-studies/case-studies-carousel")),
+  // Comparison Table
+  "comparison-table-grid": dynamic(() => import("@/components/patterns/comparison-table/comparison-table-grid")),
+  "comparison-table-cards": dynamic(() => import("@/components/patterns/comparison-table/comparison-table-cards")),
+  "comparison-table-wobble": dynamic(() => import("@/components/patterns/comparison-table/comparison-table-wobble")),
+  // Trust Badges
+  "trust-badges-bar": dynamic(() => import("@/components/patterns/trust-badges/trust-badges-bar")),
+  "trust-badges-glow": dynamic(() => import("@/components/patterns/trust-badges/trust-badges-glow")),
+  // Newsletter
+  "newsletter-beams": dynamic(() => import("@/components/patterns/newsletter/newsletter-beams")),
+  "newsletter-border": dynamic(() => import("@/components/patterns/newsletter/newsletter-border")),
+  "newsletter-boxes": dynamic(() => import("@/components/patterns/newsletter/newsletter-boxes")),
+  // Problem & Solution
+  "problem-solution-compare": dynamic(() => import("@/components/patterns/problem-solution/problem-solution-compare")),
+  "problem-solution-cards": dynamic(() => import("@/components/patterns/problem-solution/problem-solution-cards")),
+  "problem-solution-reveal": dynamic(() => import("@/components/patterns/problem-solution/problem-solution-reveal")),
 };
 
 export default function PatternPage() {
