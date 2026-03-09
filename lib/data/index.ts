@@ -1,0 +1,11 @@
+export { navItems, dockItems } from "./navigation";
+export { flipWords } from "./hero";
+export { bentoItems, stickyScrollContent, tabsData } from "./features";
+export { testimonials, animatedTestimonials, tooltipPeople } from "./social-proof";
+export { pricingTiers } from "./pricing";
+export type { PricingTier } from "./pricing";
+export { products, focusCardsData, sliderImages } from "./product-showcase";
+export { timelineData } from "./about";
+export { worldMapDots } from "./global-reach";
+export { loadingStates } from "./interactive-demo";
+export { marqueeImages } from "./media";

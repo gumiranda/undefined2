@@ -7,8 +7,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-body, "Geist"), ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, monospace;
+  --font-display: var(--font-display, "Geist"), ui-sans-serif, system-ui, sans-serif;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -45,6 +46,26 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* SaaS semantic colors */
+  --color-surface-primary: var(--surface-primary);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-surface-sunken: var(--surface-sunken);
+  --color-surface-overlay: var(--surface-overlay);
+  --color-section-bg: var(--section-bg);
+  --color-section-bg-alt: var(--section-bg-alt);
+  --color-section-heading: var(--section-heading);
+  --color-section-subheading: var(--section-subheading);
+  --color-gradient-from: var(--gradient-from);
+  --color-gradient-to: var(--gradient-to);
+  --color-gradient-accent: var(--gradient-accent);
+
+  /* SaaS radius tokens */
+  --radius-card: var(--radius-card);
+  --radius-button: var(--radius-button);
+  --radius-input-field: var(--radius-input);
+  --radius-badge: var(--radius-badge);
+  --radius-section: var(--radius-section);
 }
 
 :root {
@@ -80,6 +101,41 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* SaaS Semantic Surfaces */
+  --surface-primary: var(--background);
+  --surface-elevated: var(--card);
+  --surface-sunken: oklch(0.97 0 0);
+  --surface-overlay: oklch(0 0 0 / 50%);
+
+  /* Section tokens */
+  --section-bg: var(--background);
+  --section-bg-alt: var(--secondary);
+  --section-heading: var(--foreground);
+  --section-subheading: var(--muted-foreground);
+
+  /* Brand gradients */
+  --gradient-from: oklch(0.546 0.245 262.881);
+  --gradient-to: oklch(0.623 0.214 259.815);
+  --gradient-accent: oklch(0.809 0.105 251.813);
+
+  /* Border radius tokens */
+  --radius-card: var(--radius);
+  --radius-button: calc(var(--radius) * 0.8);
+  --radius-input: calc(var(--radius) * 0.6);
+  --radius-badge: 9999px;
+  --radius-section: 0px;
+
+  /* Spacing scale */
+  --section-padding-y: 5rem;
+  --section-gap: 4rem;
+  --content-max-width: 80rem;
+
+  /* Typography scale */
+  --heading-xl: 4.5rem;
+  --heading-lg: 3rem;
+  --heading-md: 1.875rem;
+  --heading-sm: 1.25rem;
 }
 
 .dark {
@@ -114,6 +170,153 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+
+  /* Dark mode surfaces */
+  --surface-sunken: oklch(0.1 0 0);
+  --surface-overlay: oklch(0 0 0 / 70%);
+}
+
+/* ═══ MIDNIGHT — dark luxury editorial ═══ */
+[data-theme="midnight"] {
+  --font-display: "Bricolage Grotesque", serif;
+  --font-body: "Geist", sans-serif;
+
+  --background: oklch(0.13 0.04 270);
+  --foreground: oklch(0.93 0.02 85);
+  --primary: oklch(0.75 0.15 85);
+  --primary-foreground: oklch(0.13 0.04 270);
+  --card: oklch(0.17 0.035 270);
+  --card-foreground: oklch(0.93 0.02 85);
+  --popover: oklch(0.17 0.035 270);
+  --popover-foreground: oklch(0.93 0.02 85);
+  --secondary: oklch(0.22 0.03 270);
+  --secondary-foreground: oklch(0.93 0.02 85);
+  --muted: oklch(0.22 0.03 270);
+  --muted-foreground: oklch(0.65 0.03 270);
+  --accent: oklch(0.65 0.12 40);
+  --accent-foreground: oklch(0.93 0.02 85);
+  --border: oklch(0.25 0.04 270 / 40%);
+  --input: oklch(0.25 0.04 270 / 40%);
+  --ring: oklch(0.75 0.15 85);
+
+  --gradient-from: oklch(0.75 0.15 85);
+  --gradient-to: oklch(0.65 0.12 40);
+
+  --radius-card: 0.75rem;
+  --radius-button: 0.5rem;
+  --radius-section: 0.5rem;
+  --radius-badge: 9999px;
+
+  --surface-sunken: oklch(0.1 0.03 270);
+  --surface-overlay: oklch(0 0 0 / 70%);
+}
+
+/* ═══ TERMINAL — hacker/dev tools ═══ */
+[data-theme="terminal"] {
+  --font-display: "JetBrains Mono", monospace;
+  --font-body: "JetBrains Mono", monospace;
+
+  --background: oklch(0.08 0.01 150);
+  --foreground: oklch(0.85 0.22 145);
+  --primary: oklch(0.8 0.25 145);
+  --primary-foreground: oklch(0.08 0.01 150);
+  --card: oklch(0.11 0.015 150);
+  --card-foreground: oklch(0.85 0.22 145);
+  --popover: oklch(0.11 0.015 150);
+  --popover-foreground: oklch(0.85 0.22 145);
+  --secondary: oklch(0.15 0.01 150);
+  --secondary-foreground: oklch(0.85 0.22 145);
+  --muted: oklch(0.15 0.01 150);
+  --muted-foreground: oklch(0.55 0.1 145);
+  --accent: oklch(0.75 0.18 60);
+  --accent-foreground: oklch(0.08 0.01 150);
+  --border: oklch(0.8 0.25 145 / 20%);
+  --input: oklch(0.8 0.25 145 / 20%);
+  --ring: oklch(0.8 0.25 145);
+
+  --gradient-from: oklch(0.8 0.25 145);
+  --gradient-to: oklch(0.7 0.2 180);
+
+  --radius-card: 0px;
+  --radius-button: 0px;
+  --radius-input: 0px;
+  --radius-badge: 0px;
+  --radius-section: 0px;
+
+  --surface-sunken: oklch(0.05 0.005 150);
+  --surface-overlay: oklch(0 0 0 / 80%);
+}
+
+/* ═══ CERAMIC — organic warmth ═══ */
+[data-theme="ceramic"] {
+  --font-display: "Instrument Serif", serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+
+  --background: oklch(0.97 0.01 80);
+  --foreground: oklch(0.2 0.02 50);
+  --primary: oklch(0.55 0.15 40);
+  --primary-foreground: oklch(0.97 0.01 80);
+  --card: oklch(0.99 0.005 80);
+  --card-foreground: oklch(0.2 0.02 50);
+  --popover: oklch(0.99 0.005 80);
+  --popover-foreground: oklch(0.2 0.02 50);
+  --secondary: oklch(0.93 0.015 80);
+  --secondary-foreground: oklch(0.2 0.02 50);
+  --muted: oklch(0.93 0.015 80);
+  --muted-foreground: oklch(0.5 0.04 50);
+  --accent: oklch(0.7 0.12 160);
+  --accent-foreground: oklch(0.2 0.02 50);
+  --border: oklch(0.85 0.02 60);
+  --input: oklch(0.85 0.02 60);
+  --ring: oklch(0.55 0.15 40);
+
+  --gradient-from: oklch(0.55 0.15 40);
+  --gradient-to: oklch(0.7 0.12 160);
+
+  --radius-card: 1.5rem;
+  --radius-button: 1rem;
+  --radius-input: 0.75rem;
+  --radius-badge: 9999px;
+  --radius-section: 2rem;
+
+  --surface-sunken: oklch(0.94 0.012 80);
+  --surface-overlay: oklch(0 0 0 / 40%);
+}
+
+/* ═══ GRAPHITE — enterprise brutalist ═══ */
+[data-theme="graphite"] {
+  --font-display: "Instrument Sans", sans-serif;
+  --font-body: "IBM Plex Sans", sans-serif;
+
+  --background: oklch(0.985 0 0);
+  --foreground: oklch(0.15 0 0);
+  --primary: oklch(0.5 0.22 265);
+  --primary-foreground: oklch(0.985 0 0);
+  --card: oklch(0.97 0 0);
+  --card-foreground: oklch(0.15 0 0);
+  --popover: oklch(0.97 0 0);
+  --popover-foreground: oklch(0.15 0 0);
+  --secondary: oklch(0.93 0 0);
+  --secondary-foreground: oklch(0.15 0 0);
+  --muted: oklch(0.93 0 0);
+  --muted-foreground: oklch(0.45 0 0);
+  --accent: oklch(0.6 0.2 25);
+  --accent-foreground: oklch(0.985 0 0);
+  --border: oklch(0.88 0 0);
+  --input: oklch(0.88 0 0);
+  --ring: oklch(0.5 0.22 265);
+
+  --gradient-from: oklch(0.5 0.22 265);
+  --gradient-to: oklch(0.5 0.22 265);
+
+  --radius-card: 0.125rem;
+  --radius-button: 0.125rem;
+  --radius-input: 0.125rem;
+  --radius-badge: 0.125rem;
+  --radius-section: 0px;
+
+  --surface-sunken: oklch(0.95 0 0);
+  --surface-overlay: oklch(0 0 0 / 50%);
 }
 
 @layer base {

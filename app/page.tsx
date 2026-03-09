@@ -1,45 +1,41 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import Navbar from "@/components/sections/navbar";
-import Hero from "@/components/sections/hero";
-import Backgrounds from "@/components/sections/backgrounds";
-import TextEffects from "@/components/sections/text-effects";
-import Cards from "@/components/sections/cards";
-import Bento from "@/components/sections/bento";
-import Interactive from "@/components/sections/interactive";
-import TabsSection from "@/components/sections/tabs-section";
-import Testimonials from "@/components/sections/testimonials";
-import TimelineSection from "@/components/sections/timeline-section";
-import Footer from "@/components/sections/footer";
+import FloatingNavPattern from "@/components/patterns/navigation/floating-nav";
+import HeroAurora from "@/components/patterns/hero/hero-aurora";
+import FeaturesBento from "@/components/patterns/features/features-bento";
+import SocialProofCarousel from "@/components/patterns/social-proof/social-proof-carousel";
+import PricingCards from "@/components/patterns/pricing/pricing-cards";
+import CtaBeams from "@/components/patterns/cta/cta-beams";
+import AboutTimeline from "@/components/patterns/about/about-timeline";
+import DemoCompare from "@/components/patterns/interactive-demo/demo-compare";
+import FooterBeams from "@/components/patterns/footer/footer-beams";
+import ThemePicker from "@/components/patterns/_shared/theme-picker";
 
-const Parallax = dynamic(() => import("@/components/sections/parallax"), {
-  ssr: false,
-});
-const Scroll = dynamic(() => import("@/components/sections/scroll"), {
-  ssr: false,
-});
-const ThreeDMap = dynamic(() => import("@/components/sections/three-d-map"), {
-  ssr: false,
-});
+const ShowcaseParallax = dynamic(
+  () => import("@/components/patterns/product-showcase/showcase-parallax"),
+  { ssr: false }
+);
+const ReachMap = dynamic(
+  () => import("@/components/patterns/global-reach/reach-map"),
+  { ssr: false }
+);
 
 export default function Home() {
   return (
-    <main className="relative bg-black">
-      <Navbar />
-      <Hero />
-      <Backgrounds />
-      <TextEffects />
-      <Cards />
-      <Bento />
-      <Interactive />
-      <TabsSection />
-      <Parallax />
-      <Scroll />
-      <Testimonials />
-      <TimelineSection />
-      <ThreeDMap />
-      <Footer />
+    <main className="relative bg-section-bg">
+      <FloatingNavPattern />
+      <HeroAurora />
+      <FeaturesBento />
+      <ShowcaseParallax />
+      <PricingCards />
+      <SocialProofCarousel />
+      <AboutTimeline />
+      <DemoCompare />
+      <ReachMap />
+      <CtaBeams />
+      <FooterBeams />
+      <ThemePicker />
     </main>
   );
 }
