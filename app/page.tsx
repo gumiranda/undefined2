@@ -12,6 +12,7 @@ import CodeSnippetTabs from "@/components/patterns/code-snippet/code-snippet-tab
 import IntegrationsBento from "@/components/patterns/integrations/integrations-bento";
 import StatsCounterBar from "@/components/patterns/stats-counter/stats-counter-bar";
 import PricingCards from "@/components/patterns/pricing/pricing-cards";
+import PricingPage from "@/components/patterns/subscription-flow/pricing-page";
 import ComparisonTableGrid from "@/components/patterns/comparison-table/comparison-table-grid";
 import SocialProofCarousel from "@/components/patterns/social-proof/social-proof-carousel";
 import CaseStudiesSticky from "@/components/patterns/case-studies/case-studies-sticky";
@@ -48,6 +49,7 @@ export default function Home() {
       <ShowcaseParallax />
       <StatsCounterBar />
       <PricingCards />
+      <PricingPage />
       <ComparisonTableGrid />
       <SocialProofCarousel />
       <CaseStudiesSticky />

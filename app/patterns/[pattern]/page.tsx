@@ -94,6 +94,14 @@ const componentMap: Record<string, React.ComponentType<{ id?: string }>> = {
   "problem-solution-compare": dynamic(() => import("@/components/patterns/problem-solution/problem-solution-compare")),
   "problem-solution-cards": dynamic(() => import("@/components/patterns/problem-solution/problem-solution-cards")),
   "problem-solution-reveal": dynamic(() => import("@/components/patterns/problem-solution/problem-solution-reveal")),
+  // Subscription Flow
+  "sub-pricing-page": dynamic(() => import("@/components/patterns/subscription-flow/pricing-page")),
+  "sub-checkout-card": dynamic(() => import("@/components/patterns/subscription-flow/checkout-card")),
+  "sub-checkout-pix": dynamic(() => import("@/components/patterns/subscription-flow/checkout-pix")),
+  "sub-checkout-boleto": dynamic(() => import("@/components/patterns/subscription-flow/checkout-boleto")),
+  "sub-billing-portal": dynamic(() => import("@/components/patterns/subscription-flow/billing-portal")),
+  "sub-trial-onboarding": dynamic(() => import("@/components/patterns/subscription-flow/trial-onboarding")),
+  "sub-payment-failed": dynamic(() => import("@/components/patterns/subscription-flow/payment-failed")),
 };
 
 export default function PatternPage() {

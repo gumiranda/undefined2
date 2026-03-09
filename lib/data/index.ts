@@ -39,3 +39,25 @@ export type { TrustBadge } from "./trust-badges";
 export { newsletterContent } from "./newsletter";
 export type { NewsletterContent } from "./newsletter";
 export { problemSolutionData } from "./problem-solution";
+export {
+  subscriptionPlans,
+  comparisonFeatureNames,
+  planFaqs,
+  mockPaymentMethod,
+  mockInvoices,
+  mockUsageQuotas,
+  onboardingSteps,
+  mockFailedPayment,
+  mockPixCode,
+  mockBoletoNumber,
+} from "./subscription-flow";
+export type {
+  SubscriptionPlan,
+  PlanFaq,
+  PaymentMethod,
+  Invoice,
+  UsageQuota,
+  OnboardingStep,
+  FormField,
+  FailedPaymentInfo,
+} from "./subscription-flow";

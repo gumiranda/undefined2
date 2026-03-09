@@ -23,6 +23,7 @@ import { variants as comparisonTableVariants } from "@/components/patterns/compa
 import { variants as trustBadgesVariants } from "@/components/patterns/trust-badges";
 import { variants as newsletterVariants } from "@/components/patterns/newsletter";
 import { variants as problemSolutionVariants } from "@/components/patterns/problem-solution";
+import { variants as subscriptionFlowVariants } from "@/components/patterns/subscription-flow";
 
 export interface PatternGroup {
   id: string;
@@ -193,6 +194,14 @@ export const patternGroups: PatternGroup[] = [
     description: "Before/after comparisons highlighting platform value.",
     variants: problemSolutionVariants,
     defaultVariant: "problem-solution-cards",
+  },
+  {
+    id: "subscription-flow",
+    name: "Subscription Flow",
+    description:
+      "Complete subscription lifecycle: pricing, checkout, billing, onboarding, and recovery.",
+    variants: subscriptionFlowVariants,
+    defaultVariant: "sub-pricing-page",
   },
 ];
 
