@@ -70,3 +70,7 @@ export {
 
 // Nurture
 export { roiCalculatorData, resultsShowcaseData } from "./nurture";
+
+// Pricing Page
+export { pricingPagePlans, pricingPageFaqs, formatBRL } from "./pricing-page";
+export type { PricingPagePlan } from "./pricing-page";

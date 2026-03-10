@@ -26,6 +26,7 @@ const componentMap: Record<string, React.ComponentType<{ id?: string }>> = {
   "pricing-cards": dynamic(() => import("@/components/patterns/pricing/pricing-cards")),
   "pricing-comparison": dynamic(() => import("@/components/patterns/pricing/pricing-comparison")),
   "pricing-spotlight": dynamic(() => import("@/components/patterns/pricing/pricing-spotlight")),
+  "pricing-page-br": dynamic(() => import("@/components/patterns/pricing/pricing-page-br")),
   // Product Showcase
   "showcase-parallax": dynamic(() => import("@/components/patterns/product-showcase/showcase-parallax"), { ssr: false }),
   "showcase-scroll": dynamic(() => import("@/components/patterns/product-showcase/showcase-scroll"), { ssr: false }),
