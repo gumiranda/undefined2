@@ -41,7 +41,6 @@ export type { NewsletterContent } from "./newsletter";
 export { problemSolutionData } from "./problem-solution";
 export {
   subscriptionPlans,
-  comparisonFeatureNames,
   planFaqs,
   mockPaymentMethod,
   mockInvoices,
@@ -51,13 +50,23 @@ export {
   mockPixCode,
   mockBoletoNumber,
 } from "./subscription-flow";
-export type {
-  SubscriptionPlan,
-  PlanFaq,
-  PaymentMethod,
-  Invoice,
-  UsageQuota,
-  OnboardingStep,
-  FormField,
-  FailedPaymentInfo,
-} from "./subscription-flow";
+
+// Lead Capture
+export {
+  leadMagnetData,
+  leadCaptureModalData,
+  whatsAppCaptureData,
+  demoRequestData,
+} from "./lead-capture";
+
+// Conversion
+export {
+  dualCtaPlans,
+  checkoutSelfServiceData,
+  thankYouOnboardingData,
+  thankYouScheduledData,
+  waitlistData,
+} from "./conversion";
+
+// Nurture
+export { roiCalculatorData, resultsShowcaseData } from "./nurture";

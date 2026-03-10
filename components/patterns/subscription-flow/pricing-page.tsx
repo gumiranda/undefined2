@@ -6,7 +6,6 @@ import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { Button as MovingBorderButton } from "@/components/ui/moving-border";
 import {
   subscriptionPlans,
-  comparisonFeatureNames,
   planFaqs,
 } from "@/lib/data/subscription-flow";
 import SectionWrapper from "../_shared/section-wrapper";
@@ -172,7 +171,7 @@ export default function PricingPage({ className, id }: SectionProps) {
               </tr>
             </thead>
             <tbody>
-              {comparisonFeatureNames.map((feature) => (
+              {Object.keys(subscriptionPlans[0].featureComparison).map((feature) => (
                 <tr key={feature} className="border-b border-border/50">
                   <td className="py-3 pr-4 text-section-subheading">
                     {feature}

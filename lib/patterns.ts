@@ -24,6 +24,9 @@ import { variants as trustBadgesVariants } from "@/components/patterns/trust-bad
 import { variants as newsletterVariants } from "@/components/patterns/newsletter";
 import { variants as problemSolutionVariants } from "@/components/patterns/problem-solution";
 import { variants as subscriptionFlowVariants } from "@/components/patterns/subscription-flow";
+import { variants as leadCaptureVariants } from "@/components/patterns/lead-capture";
+import { variants as conversionVariants } from "@/components/patterns/conversion";
+import { variants as nurtureVariants } from "@/components/patterns/nurture";
 
 export interface PatternGroup {
   id: string;
@@ -202,6 +205,30 @@ export const patternGroups: PatternGroup[] = [
       "Complete subscription lifecycle: pricing, checkout, billing, onboarding, and recovery.",
     variants: subscriptionFlowVariants,
     defaultVariant: "sub-pricing-page",
+  },
+  {
+    id: "lead-capture",
+    name: "Lead Capture",
+    description:
+      "Formularios e CTAs de captura de leads para o mercado brasileiro: email, WhatsApp e demos.",
+    variants: leadCaptureVariants,
+    defaultVariant: "capture-inline",
+  },
+  {
+    id: "conversion",
+    name: "Conversion",
+    description:
+      "Funil de conversao BR: pricing dual-track, checkout PIX/cartao/boleto, thank-you pages e waitlist.",
+    variants: conversionVariants,
+    defaultVariant: "pricing-dual-cta",
+  },
+  {
+    id: "nurture",
+    name: "Nurture",
+    description:
+      "Nutrição de leads: calculadora de ROI interativa e showcase de resultados com metricas.",
+    variants: nurtureVariants,
+    defaultVariant: "roi-calculator",
   },
 ];
 

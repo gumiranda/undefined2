@@ -102,6 +102,20 @@ const componentMap: Record<string, React.ComponentType<{ id?: string }>> = {
   "sub-billing-portal": dynamic(() => import("@/components/patterns/subscription-flow/billing-portal")),
   "sub-trial-onboarding": dynamic(() => import("@/components/patterns/subscription-flow/trial-onboarding")),
   "sub-payment-failed": dynamic(() => import("@/components/patterns/subscription-flow/payment-failed")),
+  // Lead Capture
+  "capture-inline": dynamic(() => import("@/components/patterns/lead-capture/capture-inline")),
+  "capture-modal": dynamic(() => import("@/components/patterns/lead-capture/capture-modal")),
+  "capture-whatsapp": dynamic(() => import("@/components/patterns/lead-capture/capture-whatsapp")),
+  "capture-demo": dynamic(() => import("@/components/patterns/lead-capture/capture-demo")),
+  // Conversion
+  "pricing-dual-cta": dynamic(() => import("@/components/patterns/conversion/pricing-dual-cta")),
+  "checkout-self-service": dynamic(() => import("@/components/patterns/conversion/checkout-self-service")),
+  "thank-you-onboarding": dynamic(() => import("@/components/patterns/conversion/thank-you-onboarding")),
+  "thank-you-scheduled": dynamic(() => import("@/components/patterns/conversion/thank-you-scheduled")),
+  "waitlist": dynamic(() => import("@/components/patterns/conversion/waitlist")),
+  // Nurture
+  "roi-calculator": dynamic(() => import("@/components/patterns/nurture/roi-calculator")),
+  "results-showcase": dynamic(() => import("@/components/patterns/nurture/results-showcase")),
 };
 
 export default function PatternPage() {

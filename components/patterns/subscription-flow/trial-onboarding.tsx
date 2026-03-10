@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "motion/react";
 import { onboardingSteps } from "@/lib/data/subscription-flow";
 import SectionWrapper from "../_shared/section-wrapper";
 import SectionHeading from "../_shared/section-heading";
-import { cn } from "@/lib/utils";
 import type { SectionProps } from "../_shared/types";
 import {
   Sparkles,
@@ -142,12 +141,7 @@ export default function TrialOnboarding({ className, id }: SectionProps) {
               onClick={() => {
                 if (!isLast) setCurrentStep((s) => s + 1);
               }}
-              className={cn(
-                "rounded-(--radius-button) px-6 py-2 text-sm font-semibold",
-                isLast
-                  ? "bg-primary text-primary-foreground hover:opacity-90"
-                  : "bg-primary text-primary-foreground hover:opacity-90"
-              )}
+              className="rounded-(--radius-button) bg-primary px-6 py-2 text-sm font-semibold text-primary-foreground hover:opacity-90"
             >
               {isLast ? "Get Started" : "Next"}
             </button>

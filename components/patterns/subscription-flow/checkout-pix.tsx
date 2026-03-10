@@ -5,87 +5,10 @@ import { motion, AnimatePresence } from "motion/react";
 import { subscriptionPlans, mockPixCode } from "@/lib/data/subscription-flow";
 import SectionWrapper from "../_shared/section-wrapper";
 import SectionHeading from "../_shared/section-heading";
+import PixQrCode from "../_shared/pix-qr-code";
 import { cn } from "@/lib/utils";
 import type { SectionProps } from "../_shared/types";
 import { Copy, Check, Clock, CheckCircle2 } from "lucide-react";
-
-/* ── Deterministic QR code SVG ──────────────────────────────────────────── */
-function generateQrModules(): boolean[][] {
-  const size = 25;
-  const grid: boolean[][] = Array.from({ length: size }, () =>
-    Array(size).fill(false)
-  );
-
-  // Finder patterns (3 corners)
-  const drawFinder = (row: number, col: number) => {
-    for (let r = 0; r < 7; r++) {
-      for (let c = 0; c < 7; c++) {
-        const isOuter = r === 0 || r === 6 || c === 0 || c === 6;
-        const isInner = r >= 2 && r <= 4 && c >= 2 && c <= 4;
-        grid[row + r][col + c] = isOuter || isInner;
-      }
-    }
-  };
-
-  drawFinder(0, 0);
-  drawFinder(0, size - 7);
-  drawFinder(size - 7, 0);
-
-  // Deterministic pseudo-random data area
-  let seed = 42;
-  const next = () => {
-    seed = (seed * 1103515245 + 12345) & 0x7fffffff;
-    return seed;
-  };
-
-  for (let r = 0; r < size; r++) {
-    for (let c = 0; c < size; c++) {
-      const inFinder =
-        (r < 8 && c < 8) ||
-        (r < 8 && c >= size - 8) ||
-        (r >= size - 8 && c < 8);
-      if (!inFinder) {
-        grid[r][c] = next() % 3 !== 0;
-      }
-    }
-  }
-
-  return grid;
-}
-
-function QrCode() {
-  const modules = generateQrModules();
-  const cellSize = 8;
-  const size = modules.length * cellSize;
-
-  return (
-    <svg
-      viewBox={`0 0 ${size} ${size}`}
-      width={200}
-      height={200}
-      className="mx-auto"
-      role="img"
-      aria-label="PIX QR Code"
-    >
-      <rect width={size} height={size} fill="white" rx={4} />
-      {modules.map((row, r) =>
-        row.map(
-          (on, c) =>
-            on && (
-              <rect
-                key={`${r}-${c}`}
-                x={c * cellSize}
-                y={r * cellSize}
-                width={cellSize}
-                height={cellSize}
-                fill="#111"
-              />
-            )
-        )
-      )}
-    </svg>
-  );
-}
 
 export default function CheckoutPix({ className, id }: SectionProps) {
   const plan = subscriptionPlans[2];
@@ -133,7 +56,7 @@ export default function CheckoutPix({ className, id }: SectionProps) {
                 exit={{ opacity: 0, scale: 0.95 }}
                 className="flex flex-col items-center"
               >
-                <QrCode />
+                <PixQrCode />
 
                 {/* Timer */}
                 <div className="mt-4 flex items-center gap-2 text-sm text-section-subheading">

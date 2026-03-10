@@ -64,21 +64,6 @@ export interface FailedPaymentInfo {
   invoiceId: string;
 }
 
-// ── Feature names for comparison table ──────────────────────────────────────
-
-export const comparisonFeatureNames = [
-  "Projects",
-  "Storage",
-  "API Requests",
-  "Team Members",
-  "Custom Domains",
-  "Analytics",
-  "Priority Support",
-  "SSO / SAML",
-  "Audit Logs",
-  "SLA Guarantee",
-];
-
 // ── Subscription Plans ──────────────────────────────────────────────────────
 
 export const subscriptionPlans: SubscriptionPlan[] = [
